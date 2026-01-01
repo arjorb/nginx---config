@@ -7,6 +7,7 @@ const replicaApp = process.env.APP_NAME
 
 app.use('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
+    console.log(`=== Served by ${replicaApp}`)
 });
 
 app.listen(port, () => {
